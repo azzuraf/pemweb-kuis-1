@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulir Registrasi</title>
+</head>
+
+<body id="body">
+    <div class="titled">
+        <h1>FORMULIR REGISTRASI</h1>
+    </div>
+    <div class="main-content">
+        <form class="form-basic" id="form" onsubmit="onSubmit()">
+            <section>
+            <h2 style="margin-top: 130px;">PESERTA</h2>
+            <div class="form-row">
+                <label>
+                <span>NAMA LENGKAP & GELAR</span>
+                <input type="text" name="name" id="nama" required>
+                </label>
+            </div>
+      
+            <div class="form-row">
+                <label>
+                <span>ASAL INSTANSI</span>
+                <input type="text" name="asal-instansi" id="asal-instansi" required>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                <span>ALAMAT</span>
+                <input type="text" name="alamat" id="alamat" required>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                <span>KODE POS</span>
+                <input type="text" name="kode-pos" id="result" required>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                <span for="provinsi">PROVINSI</span>
+                <select type="text" 
+                        name="provinsi" 
+                        id="provinsi" 
+                        onchange="displayKabupaten()"
+                        required>
+                </select>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                <span>KOTA</span>
+                <select type="text" 
+                        name="kabupaten" 
+                        id="kabupaten"
+                        onchange="displayKecamatan()"
+                        required>
+                </select>
+                </label>
+            </div>         
+
+            <div class="form-row">
+                <label>
+                <span>NOMOR TELEPON</span>
+                <input 
+                    type="tel" 
+                    name="telp" 
+                    id="telp" 
+                    placeholder="08xxxxxxxxxx"
+                    maxlength="12" 
+                    required>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                <span>EMAIL</span>
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="email"  
+                    required>
+                </label>
+            </div>
+
+        <section>
+            <h2>SPONSOR</h2>
+            <div class="form-row">
+                <label>
+                <span>NAMA PERUSAHAAN</span>
+                <input type="text" name="nama-perusahaan" id="nama-perusahaan" required>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                <span>ALAMAT PERUSAHAAN</span>
+                <input type="text" name="alamat-perusahaan" id="alamat-perusahaan" required>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                <span>NAMA KONTAK PERSONAL</span>
+                <input type="text" name="nama-pers" id="nama-pers" required>
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                <span>TELP. PERSONAL</span>
+                <input 
+                    type="tel" 
+                    name="telp-pers" 
+                    id="telp-pers" 
+                    placeholder="08xxxxxxxxxx"
+                    maxlength="12" 
+                    required>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                <span>EMAIL PERUSAHAAN</span>
+                <input 
+                    type="email" 
+                    name="email-perusahaan" 
+                    id="email-perusahaan"  
+                    required>
+                </label>
+            </div>
+             
+        </section>
+            
+        <h2>SYARAT DAN KETENTUAN</h2>
+        <section style="margin-left: 12px;">
+            <p>Kontribusi peserta Rp. 2.500.000,- (Dua Juta Lima Ratus Ribu Rupiah) belum termasuk penginapan dan akomodasi</p><br/>
+            <b>Konfirmasi kepesertaan:</b>
+            <ul>
+                <li>Sebelum 15 Januari 2012 &nbsp; : Rp. 2.500.000,-</li>
+                <li>Sesudah 15 Januari 2012 &nbsp; : Rp. 2.500.000,-</li>
+                <li>On site &nbsp; : Rp. 2.500.000,-</li>
+            </ul>
+            <b>Pembatalan Pendaftaran:</b>
+            <ul>
+                <li>Sebelum H-5 uang dikembalikan 50%</li>
+                <li>Sesudah H-5 uang tidak dapat dikembalikan</li>
+            </ul><br/>
+            <p>Akomodasi penginapan peserta, harga kamar kelas standar berkisar antara Rp. 250.000,- sampai Rp. 350.000,- *)</p><br/>
+            <b>Pendaftaran via transfer bank ke:</b><br/>
+            <b>Nama Bank&nbsp;: Bank BCA KCU Cirebon</b><br/>
+            <b>No. Rekening&nbsp;: 1341015478</b><br/>
+            <b>Atas Nama&nbsp;: Junaedi, S.Kep</b><br/><br/>
+        </section>
+
+        <section>
+            <div class="rectangle">
+                <p>Bukti transfer mohon dikirim ke alamat Sekretariat Panitia UPTD Puskesmas Sitopeng</p>
+                <p>Jl. Sekarsari No. 1 Argasunya Harjamukti Kota Cirebon</p> 
+                <p>atau kirim ke email: enterpreneurse41@gmail.com</p>
+                <p>konfirmasi setelah transfer ke 0818232609</p>
+            </div>
+        </section>
+
+            <div class="form-row">
+                <button type="submit" id="submit">Daftar</button>
+            </div>
+            </form>
+        
+        </div>
+    <script src="script.js"></script>
+</body>
+
